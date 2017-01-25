@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../lib/alert/taxonAlert.css">
+  <link rel="stylesheet" href="back.css">
+  <title>公司管理界面</title>
+</head>
+<body>
+<nav class="navbar navbar-default bg-primary" role="navigation">
+  <div class="container ">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        易招聘
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li onclick="localStorage.clear()"><a href="../index.html"><i class="glyphicon glyphicon-off"></i>退出</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container back-content">
+  <div class="row mainContainer">
+    <div id="leftContainer" class="col-xs-2 leftContainer">
+      <div class="list-group leftMenu">
+        <a href="#" class="list-group-item active" data-module="gsxx">公司信息</a>
+        <a href="#" data-module="zwfb" class="list-group-item">职位发布</a>
+        <a href="#" data-module="zwgl" class="list-group-item">职位管理</a>
+        <a href="#" data-module="czjl" class="list-group-item">操作简历</a>
+        <a href="#" data-module="xgmm" class="list-group-item">修改密码</a>
+      </div>
+    </div>
+    <div id="rightContainer" class="col-xs-10 rightContainer">
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p>Copyright 2011-2015 xxxx 版权所有 All Rights Reserved</p>
+  <p>备案编号：沪ICP备xxxx号-5</p>
+</div>
+<script src="../lib/jQuery/jquery-1.11.3.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/seajs/sea-debug.js"></script>
+<script src="../lib/seajs/seajs-text.js"></script>
+<script src="../lib/seajs/seajs-css.js"></script>
+<script>
+  seajs.config({
+    base: "../lib",
+    alias: {
+      'tools': 'tools',
+      'taxon': 'alert/taxonAlert'
+    }
+  });
+  seajs.use("./back", function (back) {
+    back.init();
+  });
+</script>
+</body>
+</html>

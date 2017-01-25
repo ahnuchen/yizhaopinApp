@@ -1,0 +1,79 @@
+<div id="right-zwfb" style="display: none;">
+  <form role="form" class="form-inline">
+    <legend>职位发布</legend>
+    <!--      Province: {type: Sequelize.STRING(50), allowNull: false},//工作省份
+          City: {type: Sequelize.STRING(50), allowNull: false},//工作城市
+          Brief: {type: Sequelize.STRING(50), allowNull: false},//职位简介
+          CompanyName: {type: Sequelize.STRING(50), allowNull: false},//@公司名称
+          CompanyLogo: {type: Sequelize.STRING(200)},//公司logo图片
+          Type: {type: Sequelize.INTEGER(1), allowNull: false},//@职位类型{1:全职,2:兼职,3:实习}
+          maxSalary: {type: Sequelize.INTEGER(2), allowNull: false},//@最高薪水 format(10,99):10k-99k
+          minSalary: {type: Sequelize.INTEGER(2), allowNull: false},//@最低薪水 format(10,99):10k-99k
+          Description: {type: Sequelize.STRING(2000), allowNull: false},//详细描述
+          Degree: {type: Sequelize.INTEGER(1), allowNull: false},//@学历 {0:大专,1:本科,2：硕士,3:博士,4:其他}
+          Experience: {type: Sequelize.INTEGER(1), allowNull: false, defaultValue: 1},//@工作经验{1:不限,2:应届毕业生,3:1-3年,4:3-5年,5:5-10年}
+          Delete: {type: Sequelize.INTEGER(1), allowNull: false, defaultValue: 1},//删除字段:{-1:删除，>=1未删除}-->
+    <div class="row">
+      <label for="zwfbProvince" class="control-label">工作省份：</label>
+      <select name="name" id="zwfbProvince" class="form-control">
+        <option value="">选择省份</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="zwfbCity" class="control-label">工作城市：</label>
+      <select name="name" id="zwfbCity" class="form-control">
+        <option value="">选择城市</option>
+      </select>
+    </div>
+  </form>
+  <div class="row">
+    <label for="zwfbBrief">职位简介：</label>
+    <input type="text" name="name" id="zwfbBrief" class="form-control" title="职位简介" placeholder="请输入职位,如:web前端">
+  </div>
+  <div class="row">
+    <label for="zwfbType">职位类型：</label>
+    <select name="name" id="zwfbType" class="form-control">
+      <option value="1">全职</option>
+      <option value="2">兼职</option>
+      <option value="3">实习</option>
+    </select>
+  </div>
+  <div class="row">
+    <label for="zwfbminSalary" class="control-label">最低薪水：</label>
+    <select name="name" id="zwfbminSalary" class="form-control">
+      <option value="">请选择</option>
+    </select>
+  </div>
+  <div class="row">
+    <label for="zwfbmaxSalary" class="control-label">最高薪水：</label>
+    <select name="name" id="zwfbmaxSalary" class="form-control">
+      <option value="">请选择</option>
+    </select>
+  </div>
+  <div class="row">
+    <label for="zwfbExperience" class="control-label">工作经验：</label>
+    <select id="zwfbExperience" class="form-control">
+      <option value="1">不限</option>
+      <option value="2">应届毕业生</option>
+      <option value="3">1-3年</option>
+      <option value="4">3-5年</option>
+      <option value="5">5-10年</option>
+    </select>
+  </div>
+  <div class="row">
+    <label for="zwfbDegree" class="control-label">最低学历：</label>
+    <select id="zwfbDegree" class="form-control">
+      <option value="0">大专</option>
+      <option value="1">本科</option>
+      <option value="2">硕士</option>
+      <option value="3">博士</option>
+      <option value="4">不限</option>
+    </select>
+  </div>
+  <div class="row">
+    <label for="zwfbDescription">职位描述：</label>
+    <textarea name="" id="zwfbDescription" class="form-control" cols="30" rows="8"
+              placeholder="请填写职位要求，工作内容等..."></textarea>
+  </div>
+  <button class="btn btn-primary" id="zwfbSubmit" disabled>提交</button>
+</div>

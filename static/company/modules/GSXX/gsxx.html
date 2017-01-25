@@ -1,0 +1,48 @@
+<div class="right-gsxx" style="display: none;">
+
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <legend>公司信息</legend>
+    </div>
+    <div class="form-group">
+      <label for="gsxxName">公司名称：</label>
+      <input type="email" class="form-control" id="gsxxName" placeholder="请输入公司名称">
+    </div>
+    <div class="form-group">
+      <label for="gsxxStage">公司发展阶段：</label>
+      <select name="stage" id="gsxxStage" class="form-control">
+        <option value="0">请选择发展阶段</option>
+        <option value="1">不需要融资</option>
+      	<option value="2">天使轮</option>
+      	<option value="3">A轮</option>
+      	<option value="4">B轮</option>
+      	<option value="5">C轮</option>
+      	<option value="6">D轮及以上</option>
+      	<option value="7">上市公司</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="gsxxScale">公司规模：</label>
+      <select name="stage" id="gsxxScale" class="form-control">
+        <option value="0">请选择公司规模</option>
+        <option value="1">15人以下</option>
+      	<option value="2">15-50人</option>
+      	<option value="3">50-150人</option>
+      	<option value="4">150-500人</option>
+      	<option value="5">500-2000人</option>
+      	<option value="6">2000人以上</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="gsxxLogoInput">公司logo：</label>
+      <input type="file" accept="image/png" id="gsxxLogoInput">
+      <p class="help-block">请上传公司logo图片</p>
+      <img src="../img/companydefaultlogo.png" class="img-circle gsxxLogo" alt="公司logo" id="gsxxLogo">
+    </div>
+    <button type="button" class="btn btn-primary" id="gsxxSubmit" disabled>保存修改</button>
+  </form>
+  <div class="alert alert-warning">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <strong>注意</strong> 请完善公司信息，审核通过后您发布的职位便可以显示!
+  </div>
+</div>

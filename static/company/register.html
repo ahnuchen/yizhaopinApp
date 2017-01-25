@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="lib/alert/taxonAlert.css">
+  <title>易招聘公司注册</title>
+</head>
+<body>
+<div class="login">
+  <div class="loginmain">
+    <h2>注册易招聘公司账号</h2>
+    <form action="#" class="form-horizontal">
+      <!-- 让表单在一行中显示form-horizontal -->
+      <div class="form-group">
+        <label for="username" class="col-lg-1 control-label">用户名</label>
+        <div class="col-lg-4">
+          <input type="text" name="username" id="username" class="form-control" placeholder="请输入用户名">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password" class="col-lg-1 control-label">密码</label>
+        <div class="col-lg-4">
+          <input type="password" name="password" id="password" class="form-control" placeholder="请输入密码">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password" class="col-lg-1 control-label">确认密码</label>
+        <div class="col-lg-4">
+          <input type="password" name="confirmPassword" id="confirmPassword" class="form-control" placeholder="请确认密码">
+        </div>
+      </div>
+      <div class="form-group"></div>
+      <div class="form-group">
+        <div class="col-lg-4 col-lg-offset-1">
+          <input type="button" name="button" id="register-btn" value="提交" class="btn btn-warning btn-lg">
+          <a href="index.html" type="button" name="button" id="goto-login" class="btn btn-info btn-lg pull-right">已有账号?去登陆</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/alert/taxonAlert.js"></script>
+<script>
+  var host = "http://localhost:8765";
+  var postJson = function (url, data, success, error) {
+    $.ajax({
+      type: 'post',
+      data: data,
+      url: host + url,
+      contentType: "application/x-www-form-urlencoded",
+      dataType: "json",
+      success: success,
+      error: error
+    })
+  };
+  var registFun = function () {
+    var Account = $('#username').val(),
+      Password = $('#password').val(),
+      confirmPassword = $('#confirmPassword').val();
+    if (Password !== confirmPassword) {
+      taxon.alert('两次密码不一致!');
+      return false;
+    }
+    postJson('/api/company/signUp', {
+      Account: Account,
+      Password: Password
+    }, function (_res) {
+      if (_res.success) {
+        taxon.alert({
+          content: "注册成功",
+          text4AlertBtn: "现在登录"
+        }).on('alert', function () {
+          window.location.href = 'index.html';
+        })
+      } else {
+        taxon.alert(_res.error.message);
+      }
+    },function (_err) {
+      taxon.alert('注册失败!')
+    })
+  };
+  $(document).keydown(function (e) {
+    if(e.keyCode===13){
+      registFun();
+    }
+  });
+  $('#register-btn').click(registFun);
+</script>
+</body>
+</html>
