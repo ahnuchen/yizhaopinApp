@@ -57,6 +57,6 @@ export default {
     }
     return url && typeof url !== 'object' ? url : 'javascript:void(0);'
   },
-  imageHost: 'http://localhost:8080',
-  apiHost: 'http://localhost:8080/api/user'
+  imageHost: 'http://127.0.0.1:8080',
+  apiHost: 'http://127.0.0.1:8080/api/user'
 }

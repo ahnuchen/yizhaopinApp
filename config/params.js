@@ -12,7 +12,7 @@ let params = {
     dialect:'mysql',
     port:'3306',
     user: 'root',
-    password: 'root',
+    password: '',
     database: 'yizhaopin',
     charset: 'UTF8_GENERAL_CI',
     timezone: '+08:00',

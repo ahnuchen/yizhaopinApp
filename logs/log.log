@@ -1,3 +1,17 @@
 [2017-01-25 16:32:37.240] [INFO] log - [orm] connect yizhaopin user: root
 [2017-01-25 16:33:39.443] [INFO] log - [orm] connect yizhaopin user: root
 [2017-01-25 16:34:49.553] [INFO] log - generate token :5faed781-41fb-4b94-aabe-895abad58570_1485333289553
+[2017-10-09 18:24:18.967] [INFO] log - [orm] connect yizhaopin user: root
+[2017-10-09 18:25:30.050] [INFO] log - [orm] connect yizhaopin user: root
+[2017-10-09 18:26:11.007] [INFO] log - [orm] connect yizhaopin user: root
+[2017-10-09 18:27:26.619] [INFO] log - --注册--
+[2017-10-09 18:27:30.679] [INFO] log - generate token :3d9991a9-2376-48f4-a280-d5cfb61cc800_1507544850679
+[2018-03-10 14:58:58.085] [INFO] log - [orm] connect yizhaopin user: root
+[2018-03-10 15:02:52.357] [INFO] log - --注册--
+[2018-03-10 15:02:59.358] [INFO] log - generate token :36b6c4e3-d57e-47f9-9f5b-0e2e441ca9c8_1520665379358
+[2018-03-10 15:07:30.120] [INFO] log - [orm] connect yizhaopin user: root
+[2018-03-10 15:08:58.178] [INFO] log - --注册--
+[2018-03-10 15:09:10.382] [INFO] log - generate token :899afbcd-48d6-4e39-b2ef-bd783b02adff_1520665750381
+[2018-03-10 15:09:55.691] [INFO] log - 上传图片
+[2018-03-10 15:09:55.691] [INFO] log - true
+[2018-03-10 15:15:57.467] [INFO] log - generate token :cd0c0b6e-799b-4ede-b0b2-ac8360111fea_1520666157467

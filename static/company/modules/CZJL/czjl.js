@@ -28,6 +28,7 @@ define(function (require, exports) {
           }
         })
         bindEvents(tpl, resumes)
+        $(tpl.find('#stateTabs li')[0]).trigger('click')
       } else {
         taxon.alert('获取简历失败！' + _res.error.message)
       }

@@ -4,8 +4,8 @@
  */
 define(function (require, exports, module) {
   function Tools() {
-    this.apiHost = "http://localhost:8080/api";
-    this.Host = "http://localhost:8080";
+    this.apiHost = "http://127.0.0.1:8080/api";
+    this.Host = "http://127.0.0.1:8080";
   }
 
   /**
